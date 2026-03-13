@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <!-- Gradient to create a fade-out effect at the ends of the stroke (right side) -->
+    <linearGradient id="strokeFade" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#007336" stop-opacity="0" />
+      <stop offset="10%" stop-color="#007336" stop-opacity="0.2" />
+      <stop offset="25%" stop-color="#007336" stop-opacity="0.8" />
+      <stop offset="40%" stop-color="#007336" stop-opacity="1" />
+      <stop offset="100%" stop-color="#007336" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Circle with thick grey border -->
+  <circle cx="50" cy="50" r="46" fill="#F5F4EF" stroke="#D1D1D1" stroke-width="4"/>
+  
+  <!-- Paint Stroke Swoosh -->
+  <!-- Starts above the C, sweeps counter-clockwise, ends below the C -->
+  <path d="M 68 28 A 28 28 0 1 0 74 66" fill="none" stroke="url(#strokeFade)" stroke-width="6" stroke-linecap="round"/>
+  
+  <!-- GC Initials -->
+  <text x="50" y="63" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="bold" fill="#007336" text-anchor="middle">
+    <tspan>G</tspan><tspan dx="-5">C</tspan>
+  </text>
+</svg>

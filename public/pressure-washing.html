@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pressure Washing & Soft Washing | Green Clean</title>
+    <meta name="description" content="Professional pressure washing and soft washing services in the Lower Mainland. We clean driveways, decks, siding, and storefronts.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .service-page-hero {
+            padding: 120px 20px 60px;
+            background: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+        }
+        .service-page-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .service-details {
+            padding: 60px 20px;
+        }
+        .service-content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        .service-content-grid.reverse {
+            direction: rtl;
+        }
+        .service-content-grid.reverse > * {
+            direction: ltr;
+        }
+        .service-text h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        .service-text p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .service-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        @media (max-width: 768px) {
+            .service-content-grid {
+                grid-template-columns: 1fr;
+            }
+            .service-content-grid.reverse {
+                direction: ltr;
+            }
+        }
+        .service-cta {
+            text-align: center;
+            padding: 40px;
+            background: var(--light-bg);
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.svg" alt="Green Clean Logo" class="logo-img">
+                <span class="logo-text">GreenClean</span>
+            </a>
+            
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="index.html#services" class="nav-link">Our Services</a></li>
+                <li class="nav-item"><a href="index.html#gallery" class="nav-link">Recent Work</a></li>
+                <li class="nav-item"><a href="index.html#about" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item nav-cta"><a href="index.html#contact" class="btn btn-primary">Get a Free Quote</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Service Hero -->
+    <header class="service-page-hero">
+        <div class="container">
+            <h1>Pressure Washing & Soft Washing</h1>
+            <p>Transform your property and blast away years of dirt, grime, and stains.</p>
+        </div>
+    </header>
+
+    <!-- Service Details -->
+    <section class="service-details">
+        <div class="container">
+            
+            <div class="service-content-grid">
+                <div class="service-text">
+                    <h2>High-Powered Pressure Washing</h2>
+                    <p>Our commercial-grade pressure washing equipment is designed to tackle the toughest stains on hard surfaces. Whether it's a heavily soiled concrete driveway, a stained patio, or a dirty brick walkway, we have the power to restore it to its original look.</p>
+                    <p>We carefully adjust our pressure settings to ensure maximum cleaning power without damaging your property. Perfect for concrete, brick, stone, and exposed aggregate.</p>
+                </div>
+                <div class="service-image">
+                    <img src="pressure-washing-1.png" alt="Pressure washing a driveway">
+                </div>
+            </div>
+
+            <div class="service-content-grid reverse">
+                <div class="service-text">
+                    <h2>Gentle Soft Washing</h2>
+                    <p>Not all surfaces can handle high pressure. For delicate areas like vinyl siding, stucco, wood decks, and roofs, we use our specialized soft washing technique.</p>
+                    <p>Soft washing uses low-pressure water combined with eco-friendly cleaning solutions to safely eliminate mold, mildew, algae, and dirt. It cleans deeply and prevents regrowth, all while protecting your home's exterior from damage.</p>
+                </div>
+                <div class="service-image">
+                    <img src="pressure-washing-2.png" alt="Soft washing a house exterior">
+                </div>
+            </div>
+
+            <div class="service-cta">
+                <h2>Ready to make your property shine?</h2>
+                <p>Contact us today for a free, no-obligation estimate.</p>
+                <br>
+                <a href="index.html#contact" class="btn btn-accent">Request a Free Quote</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="logo.svg" alt="Green Clean Logo" class="logo-img">
+                        <span class="logo-text">GreenClean</span>
+                    </div>
+                    <p class="footer-tagline">Lower Mainland's Experts in Property Maintenance</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#services">Our Services</a></li>
+                        <li><a href="index.html#gallery">Recent Work</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li><a href="tel:7788621515">778-862-1515</a></li>
+                        <li><a href="mailto:greenclean.new@gmail.com">greenclean.new@gmail.com</a></li>
+                        <li>Serving the Lower Mainland, BC</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> Green Clean (2016) Inc. All rights reserved.</p>
+                <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
