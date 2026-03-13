@@ -92,9 +92,9 @@ app.post('/send-email', emailLimiter, async (req, res) => {
     await transporter.sendMail(autoReplyOptions);
 
     res.status(200).json({ success: 'Your quote request has been sent successfully!' });
-  } catch (error) {
+  } catch (error: any) {
     console.error('Error sending email:', error);
-    res.status(500).json({ error: 'There was an error sending your request. Please try again later.' });
+    res.status(500).json({ error: `There was an error sending your request: ${error.message || 'Please try again later.'}` });
   }
 });
 
