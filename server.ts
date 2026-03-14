@@ -43,6 +43,9 @@ const emailLimiter = rateLimit({
   message: { error: 'Too many requests from this IP, please try again after an hour' }
 });
 
+// Serve static files from the public directory
+app.use(express.static(path.join(__dirname_safe, 'public')));
+
 // Email sending route
 app.post('/send-email', emailLimiter, async (req, res) => {
   try {
@@ -101,20 +104,17 @@ app.post('/send-email', emailLimiter, async (req, res) => {
     await transporter.sendMail(autoReplyOptions);
 
     res.status(200).json({ success: 'Your quote request has been sent successfully!' });
-  } catch (error: any) {
+  } catch (error) {
     console.error('Error sending email:', error);
-    res.status(500).json({ error: `There was an error sending your request: ${error.message || 'Please try again later.'}` });
+    res.status(500).json({ error: 'There was an error sending your request. Please try again later.' });
   }
 });
 
 // Conditionally start server and serve static files for local development
 if (process.env.NODE_ENV !== 'production') {
-  // Serve static files from the public directory
-  app.use(express.static(path.join(__dirname_safe, '../public')));
-
   // Fallback route to serve index.html for SPA-like behavior if needed
   app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname_safe, '../public', 'index.html'));
+    res.sendFile(path.join(__dirname_safe, 'public', 'index.html'));
   });
 
   app.listen(PORT, () => {
