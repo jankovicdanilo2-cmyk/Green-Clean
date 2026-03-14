@@ -9,10 +9,19 @@ import { fileURLToPath } from 'url';
 
 dotenv.config();
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Get __dirname in an ES module environment safely
+let currentDir;
+try {
+  currentDir = path.dirname(fileURLToPath(import.meta.url));
+} catch (e) {
+  currentDir = process.cwd();
+}
+const __dirname_safe = currentDir;
 
 const app = express();
+// Enable trust proxy so rate limit relies on the actual client IP behind Vercel's edge proxy
+app.set('trust proxy', 1);
+
 const PORT = process.env.PORT || 3000;
 
 // Security headers
@@ -101,11 +110,11 @@ app.post('/send-email', emailLimiter, async (req, res) => {
 // Conditionally start server and serve static files for local development
 if (process.env.NODE_ENV !== 'production') {
   // Serve static files from the public directory
-  app.use(express.static(path.join(__dirname, '../public')));
+  app.use(express.static(path.join(__dirname_safe, '../public')));
 
   // Fallback route to serve index.html for SPA-like behavior if needed
   app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public', 'index.html'));
+    res.sendFile(path.join(__dirname_safe, '../public', 'index.html'));
   });
 
   app.listen(PORT, () => {
