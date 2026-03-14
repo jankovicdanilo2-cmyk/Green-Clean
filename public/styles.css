@@ -145,6 +145,17 @@ img {
     color: var(--primary-color);
 }
 
+.btn-outline-primary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
 .btn-block {
     display: block;
     width: 100%;
@@ -394,6 +405,13 @@ img {
 .card-content p {
     flex-grow: 1;
     margin-bottom: 20px;
+}
+
+.card-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: auto;
 }
 
 /* Why Choose Us */
