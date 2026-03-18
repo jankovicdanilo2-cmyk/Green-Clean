@@ -990,8 +990,14 @@ input:focus, select:focus, textarea:focus {
         display: none;
     }
     
+    /* On mobile, hover doesn't work well. We use the JS .show class instead */
     .dropdown:hover .dropdown-menu {
+        display: none;
+    }
+    
+    .dropdown-menu.show {
         display: block;
+        animation: fadeIn 0.3s ease;
     }
 
     .nav-menu.active {

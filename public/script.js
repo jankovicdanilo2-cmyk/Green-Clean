@@ -10,11 +10,45 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     navLinks.forEach(link => {
-        link.addEventListener('click', () => {
+        link.addEventListener('click', (e) => {
+            // If the clicked link is the dropdown toggle, let the specific handler manage it
+            if (e.target.id === 'services-dropdown-toggle') return;
+            
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
+            
+            // Close dropdown if a regular link is clicked
+            const dropdownMenu = document.getElementById('services-dropdown-menu');
+            if (dropdownMenu) {
+                dropdownMenu.classList.remove('show');
+            }
         });
     });
+
+    // Mobile Dropdown Interactive Logic
+    const servicesToggle = document.getElementById('services-dropdown-toggle');
+    const servicesMenu = document.getElementById('services-dropdown-menu');
+    let isDropdownOpen = false;
+
+    if (servicesToggle && servicesMenu) {
+        servicesToggle.addEventListener('click', (e) => {
+            // Check if we are on a smaller screen (mobile view)
+            if (window.innerWidth <= 768) {
+                if (!isDropdownOpen) {
+                    // First click: Prevent navigation, open the menu
+                    e.preventDefault();
+                    servicesMenu.classList.add('show');
+                    isDropdownOpen = true;
+                } else {
+                    // Second click: Allow navigation, close the menu, close hamburger
+                    servicesMenu.classList.remove('show');
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    isDropdownOpen = false;
+                }
+            }
+        });
+    }
 
     // Sticky Navbar on Scroll
     const navbar = document.getElementById('navbar');
