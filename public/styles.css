@@ -526,6 +526,43 @@ img {
 
 
 
+
+/* Service List Floating Badges */
+.service-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.service-badge {
+    background-color: var(--light-bg);
+    color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(26, 107, 60, 0.1);
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.service-badge.more {
+    background-color: var(--accent-color);
+    color: var(--white);
+    border-color: var(--accent-color);
+}
+
+.service-badge:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+}
 .label-before, .label-after {
     background-color: rgba(0, 0, 0, 0.6);
     color: var(--white);
