@@ -981,15 +981,27 @@ input:focus, select:focus, textarea:focus {
         margin: 16px 0;
     }
     
+    .dropdown {
+        padding-bottom: 0;
+    }
+    
     .dropdown-menu {
         position: static;
         box-shadow: none;
         background-color: transparent;
         border-top: none;
-        padding-left: 20px;
+        padding: 10px 0 0 0;
         display: none;
         width: 100%;
-        text-align: left;
+        text-align: center;
+    }
+    
+    .dropdown-link {
+        padding: 12px 10px;
+    }
+    
+    .dropdown-link:hover {
+        padding-left: 10px; /* Reset so it doesn't horizontally shift when tapped on mobile */
     }
     
     /* On mobile, disable the hover rules to avoid sticky double-taps */
