@@ -988,15 +988,17 @@ input:focus, select:focus, textarea:focus {
         border-top: none;
         padding-left: 20px;
         display: none;
+        width: 100%;
+        text-align: left;
     }
     
-    /* On mobile, hover doesn't work well. We use the JS .show class instead */
+    /* On mobile, disable the hover rules to avoid sticky double-taps */
     .dropdown:hover .dropdown-menu {
         display: none;
     }
     
     .dropdown-menu.show {
-        display: block;
+        display: block !important;
         animation: fadeIn 0.3s ease;
     }
 
