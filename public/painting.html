@@ -3,86 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exterior & Interior Painting Vancouver | Green Clean (2016) Inc.</title>
-    <meta name="description" content="Professional exterior & interior painting for commercial & strata properties in Vancouver & the Lower Mainland. Durable finishes, free quotes. Call 778-862-1515.">
+    <title>Exterior &amp; Interior Painting Vancouver | Green Clean (2016) Inc.</title>
+    <meta name="description" content="Professional exterior &amp; interior painting for commercial &amp; strata properties in Vancouver &amp; the Lower Mainland. Durable finishes, free quotes. Call 778-862-1515.">
     <meta name="keywords" content="exterior painting Vancouver, interior painting Lower Mainland, commercial painting Burnaby, strata painting Surrey, property painting BC">
     <meta name="geo.region" content="CA-BC">
     <meta name="geo.placename" content="Vancouver, British Columbia">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://greenclean2016.ca/painting.html">
-    <meta property="og:title" content="Exterior & Interior Painting Vancouver | Green Clean">
-    <meta property="og:description" content="Professional commercial & strata painting across Vancouver & the Lower Mainland. Weather-resistant finishes. Free quotes available.">
+    <meta property="og:title" content="Exterior &amp; Interior Painting Vancouver | Green Clean">
+    <meta property="og:description" content="Professional commercial &amp; strata painting across Vancouver &amp; the Lower Mainland. Weather-resistant finishes. Free quotes available.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://greenclean2016.ca/painting.html">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
-    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
     <style>
         .service-page-hero {
-            padding: 120px 20px 60px;
-            background: var(--primary-color);
-            color: var(--white);
+            padding: 140px 20px 80px;
+            background: linear-gradient(135deg, #0d3d20 0%, #1A6B3C 55%, #2d8a52 100%);
+            color: #fff;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
-        .service-page-hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-        .service-details {
-            padding: 60px 20px;
-        }
-        .service-content-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-            margin-bottom: 60px;
-        }
-        .service-content-grid.reverse {
-            direction: rtl;
-        }
-        .service-content-grid.reverse > * {
-            direction: ltr;
-        }
-        .service-text h2 {
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-        .service-text p {
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-        .service-image {
-            text-align: center;
-        }
-        .service-image img {
+        .service-page-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
             width: 100%;
-            max-width: 80%; /* Reduce max width to make images a bit smaller */
-            margin: 0 auto; /* Center the image */
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            height: 60px;
+            background: #fff;
+            clip-path: ellipse(55% 100% at 50% 100%);
         }
+        .service-page-hero h1 { font-size: 3.2rem; margin-bottom: 16px; text-shadow: 0 3px 16px rgba(0,0,0,0.35); }
+        .service-page-hero p { font-size: 1.15rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+        .hero-trust-strip { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 28px; }
+        .hero-trust-strip span { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); border-radius: 30px; padding: 7px 18px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.95rem; letter-spacing: 0.5px; }
+        .service-section { padding: 70px 20px; }
+        .service-section.tinted { background: linear-gradient(135deg, #f8fbf4 0%, #eef5e5 100%); }
+        .service-content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; max-width: 1100px; margin: 0 auto; }
+        .service-content-grid.reverse { direction: rtl; }
+        .service-content-grid.reverse > * { direction: ltr; }
+        .service-text { padding: 10px 0; }
+        .service-text h2 { color: var(--primary-color); margin-bottom: 16px; font-size: 2rem; }
+        .service-text p { margin-bottom: 14px; line-height: 1.7; color: #444; }
+        .service-image img { width: 100%; border-radius: 12px; box-shadow: 0 12px 40px rgba(0,0,0,0.13); display: block; }
+        .service-image { text-align: center; }
+        .stats-strip { background: var(--dark-green, #114B29); color: #fff; padding: 45px 20px; text-align: center; }
+        .stats-strip-inner { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; max-width: 800px; margin: 0 auto; }
+        .strip-stat { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+        .strip-stat-num { font-family: 'Barlow Condensed', sans-serif; font-size: 2.6rem; font-weight: 900; color: #7BC242; line-height: 1; }
+        .strip-stat-label { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; opacity: 0.8; }
+        .service-cta { background: linear-gradient(135deg, #0d3d20 0%, #1A6B3C 100%); color: #fff; text-align: center; padding: 70px 20px; }
+        .service-cta h2 { color: #fff; font-size: 2.4rem; margin-bottom: 12px; }
+        .service-cta p { font-size: 1.1rem; opacity: 0.85; margin-bottom: 30px; }
+        .cta-buttons { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        .cta-buttons .btn-outline { border-color: rgba(255,255,255,0.6); }
+        .cta-buttons .btn-outline:hover { background: rgba(255,255,255,0.15); color: #fff; }
         @media (max-width: 768px) {
-            .service-content-grid {
-                grid-template-columns: 1fr;
-            }
-            .service-content-grid.reverse {
-                direction: ltr;
-            }
-            .service-image img {
-                max-width: 100%; /* Go back to full width on mobile screens */
-            }
-        }
-        .service-cta {
-            text-align: center;
-            padding: 40px;
-            background: var(--light-bg);
-            border-radius: 8px;
-            margin-top: 40px;
+            .service-page-hero h1 { font-size: 2.2rem; }
+            .service-content-grid { grid-template-columns: 1fr; gap: 30px; }
+            .service-content-grid.reverse { direction: ltr; }
+            .stats-strip-inner { gap: 30px; }
+            .service-image img { max-width: 100%; }
         }
     </style>
 </head>
@@ -95,13 +82,11 @@
                 <img src="logo.svg" alt="Green Clean Logo" class="logo-img">
                 <span class="logo-text">GreenClean</span>
             </a>
-            
             <div class="hamburger" id="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-            
             <ul class="nav-menu" id="nav-menu">
                 <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
                 <li class="nav-item dropdown">
@@ -109,7 +94,7 @@
                     <ul class="dropdown-menu" id="services-dropdown-menu">
                         <li><a href="pressure-washing.html" class="dropdown-link">Pressure / Soft Washing</a></li>
                         <li><a href="window-cleaning.html" class="dropdown-link">Window Cleaning</a></li>
-                        <li><a href="painting.html" class="dropdown-link">Exterior & Interior Painting</a></li>
+                        <li><a href="painting.html" class="dropdown-link">Exterior &amp; Interior Painting</a></li>
                     </ul>
                 </li>
                 <li class="nav-item"><a href="index.html#gallery" class="nav-link">Recent Work</a></li>
@@ -120,62 +105,89 @@
         </div>
     </nav>
 
-    <!-- Service Hero -->
+    <!-- Hero -->
     <header class="service-page-hero">
         <div class="container">
             <h1>Exterior and Interior Painting</h1>
             <p>Refresh and revitalize your property with eye-catching colors and durable finishes.</p>
+            <div class="hero-trust-strip">
+                <span>✓ Commercial &amp; Strata</span>
+                <span>✓ Weather-Resistant Finishes</span>
+                <span>✓ Free Quotes</span>
+            </div>
         </div>
     </header>
 
-    <!-- Service Details -->
-    <section class="service-details">
+    <!-- Section 1 — Exterior Painting -->
+    <section class="service-section">
         <div class="container">
-            
             <div class="service-content-grid">
                 <div class="service-text">
                     <h2>Exterior Painting</h2>
                     <p>Protect your property from the harsh Lower Mainland weather while maintaining a professional, welcoming appearance. Our exterior painting services are tailored for warehouses, office buildings, retail storefronts, industrial facilities and more!</p>
                     <p>We start with thorough surface preparation, including pressure washing, scraping, and priming, to ensure a long-lasting finish. We use premium, weather-resistant commercial-grade paints designed to withstand rain, sun, and temperature fluctuations, minimizing downtime for your business.</p>
+                    <div class="service-badges" style="justify-content: flex-start; margin-top: 10px;">
+                        <span class="service-badge">🏢 Commercial Buildings</span>
+                        <span class="service-badge">🏘️ Strata Properties</span>
+                        <span class="service-badge">🏭 Industrial Facilities</span>
+                        <span class="service-badge more">+ And More</span>
+                    </div>
                 </div>
                 <div class="service-image">
                     <img src="Screenshot%202026-03-12%20205357.png" alt="Exterior painting of commercial property in Vancouver BC" referrerpolicy="no-referrer" loading="lazy">
                 </div>
             </div>
+        </div>
+    </section>
 
+    <!-- Stats Strip -->
+    <div class="stats-strip">
+        <div class="stats-strip-inner">
+            <div class="strip-stat">
+                <span class="strip-stat-num">35+</span>
+                <span class="strip-stat-label">Years Experience</span>
+            </div>
+            <div class="strip-stat">
+                <span class="strip-stat-num">100%</span>
+                <span class="strip-stat-label">Satisfaction</span>
+            </div>
+            <div class="strip-stat">
+                <span class="strip-stat-num">Fully</span>
+                <span class="strip-stat-label">Insured</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 2 — Interior Painting -->
+    <section class="service-section tinted">
+        <div class="container">
             <div class="service-content-grid reverse">
                 <div class="service-text">
                     <h2>Interior Painting</h2>
                     <p>Whether you're updating a corporate office, a retail storefront, or a large commercial facility, our interior painting services deliver flawless results with minimal disruption to your daily business operations.</p>
                     <p>We take care of everything from moving office furniture and protecting commercial flooring to drywall repair and precise trim work, ensuring a clean and professional environment for your employees and clients.</p>
-                </div>
-                <div class="service-image">
-                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Interior office painting service Lower Mainland BC" referrerpolicy="no-referrer" loading="lazy">
-                </div>
-            </div>
-
-            <!-- New Specific Services Section added here -->
-            <div class="service-content-grid" style="grid-template-columns: 1fr; text-align: center;">
-                <div class="service-text">
-                    <h2>Our Painting Services Include:</h2>
-                    <div class="service-badges">
+                    <div class="service-badges" style="justify-content: flex-start; margin-top: 10px;">
                         <span class="service-badge">🏠 Exterior Painting</span>
                         <span class="service-badge">🏢 Interior Painting</span>
                         <span class="service-badge more">+ And More</span>
                     </div>
                 </div>
-            </div>
-
-            <div class="service-cta">
-                <h2>Ready to make your property shine?</h2>
-                <p>Contact us today for a free, no-obligation estimate.</p>
-                <br>
-                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                    <a href="index.html#contact" class="btn btn-accent">Request a Free Quote</a>
-                    <a href="index.html#gallery" class="btn btn-primary">See Our Work</a>
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Interior office painting service Lower Mainland BC" referrerpolicy="no-referrer" loading="lazy">
                 </div>
             </div>
+        </div>
+    </section>
 
+    <!-- CTA -->
+    <section class="service-cta">
+        <div class="container">
+            <h2>Ready to Transform Your Property?</h2>
+            <p>Contact us today for a free, no-obligation estimate.</p>
+            <div class="cta-buttons">
+                <a href="tel:7788621515" class="btn btn-accent">📞 Call 778-862-1515</a>
+                <a href="index.html#contact" class="btn btn-outline">Request a Free Quote</a>
+            </div>
         </div>
     </section>
 
@@ -190,7 +202,6 @@
                     </div>
                     <p class="footer-tagline">Lower Mainland's Experts in Property Maintenance</p>
                 </div>
-                
                 <div class="footer-col">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
@@ -200,7 +211,6 @@
                         <li><a href="index.html#about">About Us</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-col">
                     <h3>Contact Info</h3>
                     <ul class="footer-contact">
@@ -210,7 +220,6 @@
                     </ul>
                 </div>
             </div>
-            
             <div class="footer-bottom">
                 <p>&copy; <span id="current-year">2026</span> Green Clean (2016) Inc. All rights reserved.</p>
                 <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
@@ -218,7 +227,6 @@
         </div>
     </footer>
 
-    <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
 </html>

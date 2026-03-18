@@ -3,44 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pressure Washing & Soft Washing Vancouver | Green Clean (2016) Inc.</title>
-    <meta name="description" content="Professional pressure washing & soft washing in Vancouver, Burnaby, Surrey & the Lower Mainland. Driveways, siding, decks & more. Free quotes. Call 778-862-1515.">
+    <title>Pressure Washing &amp; Soft Washing Vancouver | Green Clean (2016) Inc.</title>
+    <meta name="description" content="Professional pressure washing &amp; soft washing in Vancouver, Burnaby, Surrey &amp; the Lower Mainland. Driveways, siding, decks &amp; more. Free quotes. Call 778-862-1515.">
     <meta name="keywords" content="pressure washing Vancouver, pressure washing Burnaby, soft washing Lower Mainland, driveway cleaning Surrey, deck washing Coquitlam, commercial pressure washing BC">
     <meta name="geo.region" content="CA-BC">
     <meta name="geo.placename" content="Vancouver, British Columbia">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://greenclean2016.ca/pressure-washing.html">
-    <meta property="og:title" content="Pressure Washing & Soft Washing Vancouver | Green Clean">
-    <meta property="og:description" content="Commercial-grade pressure washing & soft washing across the Lower Mainland. Driveways, siding, decks, storefronts & more. Free quotes available.">
+    <meta property="og:title" content="Pressure Washing &amp; Soft Washing Vancouver | Green Clean">
+    <meta property="og:description" content="Commercial-grade pressure washing &amp; soft washing across the Lower Mainland. Driveways, siding, decks, storefronts &amp; more. Free quotes available.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://greenclean2016.ca/pressure-washing.html">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
-    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* ── Service Page Hero ── */
         .service-page-hero {
-            padding: 120px 20px 60px;
-            background: var(--primary-color);
-            color: var(--white);
+            padding: 140px 20px 80px;
+            background: linear-gradient(135deg, #0d3d20 0%, #1A6B3C 55%, #2d8a52 100%);
+            color: #fff;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-page-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: #fff;
+            clip-path: ellipse(55% 100% at 50% 100%);
         }
         .service-page-hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
+            font-size: 3.2rem;
+            margin-bottom: 16px;
+            text-shadow: 0 3px 16px rgba(0,0,0,0.35);
         }
-        .service-details {
-            padding: 60px 20px;
+        .service-page-hero p {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .hero-trust-strip {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 28px;
+        }
+        .hero-trust-strip span {
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.25);
+            border-radius: 30px;
+            padding: 7px 18px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* ── Content Sections ── */
+        .service-section {
+            padding: 70px 20px;
+        }
+        .service-section.tinted {
+            background: linear-gradient(135deg, #f8fbf4 0%, #eef5e5 100%);
         }
         .service-content-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 40px;
+            gap: 50px;
             align-items: center;
-            margin-bottom: 60px;
+            max-width: 1100px;
+            margin: 0 auto;
         }
         .service-content-grid.reverse {
             direction: rtl;
@@ -48,33 +90,99 @@
         .service-content-grid.reverse > * {
             direction: ltr;
         }
+        .service-text {
+            padding: 10px 0;
+        }
         .service-text h2 {
             color: var(--primary-color);
-            margin-bottom: 20px;
+            margin-bottom: 16px;
+            font-size: 2rem;
         }
         .service-text p {
-            margin-bottom: 15px;
-            line-height: 1.6;
+            margin-bottom: 14px;
+            line-height: 1.7;
+            color: #444;
         }
         .service-image img {
             width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.13);
+            display: block;
         }
-        @media (max-width: 768px) {
-            .service-content-grid {
-                grid-template-columns: 1fr;
-            }
-            .service-content-grid.reverse {
-                direction: ltr;
-            }
-        }
-        .service-cta {
+
+        /* ── Stats Strip ── */
+        .stats-strip {
+            background: var(--dark-green, #114B29);
+            color: #fff;
+            padding: 45px 20px;
             text-align: center;
-            padding: 40px;
-            background: var(--light-bg);
-            border-radius: 8px;
-            margin-top: 40px;
+        }
+        .stats-strip-inner {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .strip-stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+        .strip-stat-num {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 2.6rem;
+            font-weight: 900;
+            color: #7BC242;
+            line-height: 1;
+        }
+        .strip-stat-label {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+
+        /* ── CTA Section ── */
+        .service-cta {
+            background: linear-gradient(135deg, #0d3d20 0%, #1A6B3C 100%);
+            color: #fff;
+            text-align: center;
+            padding: 70px 20px;
+        }
+        .service-cta h2 {
+            color: #fff;
+            font-size: 2.4rem;
+            margin-bottom: 12px;
+        }
+        .service-cta p {
+            font-size: 1.1rem;
+            opacity: 0.85;
+            margin-bottom: 30px;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .cta-buttons .btn-outline {
+            border-color: rgba(255,255,255,0.6);
+        }
+        .cta-buttons .btn-outline:hover {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .service-page-hero h1 { font-size: 2.2rem; }
+            .service-content-grid { grid-template-columns: 1fr; gap: 30px; }
+            .service-content-grid.reverse { direction: ltr; }
+            .stats-strip-inner { gap: 30px; }
         }
     </style>
 </head>
@@ -87,13 +195,11 @@
                 <img src="logo.svg" alt="Green Clean Logo" class="logo-img">
                 <span class="logo-text">GreenClean</span>
             </a>
-            
             <div class="hamburger" id="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-            
             <ul class="nav-menu" id="nav-menu">
                 <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
                 <li class="nav-item dropdown">
@@ -101,7 +207,7 @@
                     <ul class="dropdown-menu" id="services-dropdown-menu">
                         <li><a href="pressure-washing.html" class="dropdown-link">Pressure / Soft Washing</a></li>
                         <li><a href="window-cleaning.html" class="dropdown-link">Window Cleaning</a></li>
-                        <li><a href="painting.html" class="dropdown-link">Exterior & Interior Painting</a></li>
+                        <li><a href="painting.html" class="dropdown-link">Exterior &amp; Interior Painting</a></li>
                     </ul>
                 </li>
                 <li class="nav-item"><a href="index.html#gallery" class="nav-link">Recent Work</a></li>
@@ -112,25 +218,29 @@
         </div>
     </nav>
 
-    <!-- Service Hero -->
+    <!-- Hero -->
     <header class="service-page-hero">
         <div class="container">
-            <h1>Pressure Washing & Soft Washing</h1>
+            <h1>Pressure Washing &amp; Soft Washing</h1>
             <p>Transform your property and blast away years of dirt, grime, and stains.</p>
+            <div class="hero-trust-strip">
+                <span>✓ Commercial-Grade Equipment</span>
+                <span>✓ Eco-Friendly Solutions</span>
+                <span>✓ Free Quotes</span>
+            </div>
         </div>
     </header>
 
-    <!-- Service Details -->
-    <section class="service-details">
+    <!-- Section 1 — Pressure Washing -->
+    <section class="service-section">
         <div class="container">
-            
             <div class="service-content-grid">
                 <div class="service-text">
                     <h2>High-Powered Pressure Washing</h2>
                     <p>Our commercial-grade pressure washing equipment is designed to tackle the toughest stains on hard surfaces. We have the power to restore your property to its original look.</p>
                     <div class="service-badges" style="justify-content: flex-start; margin-bottom: 20px;">
-                        <span class="service-badge">🛣️ Sidewalks & Driveways</span>
-                        <span class="service-badge">🏡 Patios & Garages</span>
+                        <span class="service-badge">🛣️ Sidewalks &amp; Driveways</span>
+                        <span class="service-badge">🏡 Patios &amp; Garages</span>
                         <span class="service-badge">🗑️ Garbage Areas</span>
                         <span class="service-badge">🚗 Curbs</span>
                         <span class="service-badge">🛢️ Grease Areas</span>
@@ -142,7 +252,30 @@
                     <img src="pressure-washing-1.png" alt="High pressure washing driveway in Burnaby BC" loading="lazy">
                 </div>
             </div>
+        </div>
+    </section>
 
+    <!-- Stats Strip -->
+    <div class="stats-strip">
+        <div class="stats-strip-inner">
+            <div class="strip-stat">
+                <span class="strip-stat-num">35+</span>
+                <span class="strip-stat-label">Years Experience</span>
+            </div>
+            <div class="strip-stat">
+                <span class="strip-stat-num">100%</span>
+                <span class="strip-stat-label">Satisfaction</span>
+            </div>
+            <div class="strip-stat">
+                <span class="strip-stat-num">Fully</span>
+                <span class="strip-stat-label">Insured</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 2 — Soft Washing -->
+    <section class="service-section tinted">
+        <div class="container">
             <div class="service-content-grid reverse">
                 <div class="service-text">
                     <h2>Gentle Soft Washing</h2>
@@ -158,17 +291,18 @@
                     <img src="pressure-washing-2.png" alt="Soft washing house siding in Vancouver BC" loading="lazy">
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="service-cta">
-                <h2>Ready to make your property shine?</h2>
-                <p>Contact us today for a free, no-obligation estimate.</p>
-                <br>
-                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                    <a href="index.html#contact" class="btn btn-accent">Request a Free Quote</a>
-                    <a href="index.html#gallery" class="btn btn-primary">See Our Work</a>
-                </div>
+    <!-- CTA -->
+    <section class="service-cta">
+        <div class="container">
+            <h2>Ready to Make Your Property Shine?</h2>
+            <p>Contact us today for a free, no-obligation estimate.</p>
+            <div class="cta-buttons">
+                <a href="tel:7788621515" class="btn btn-accent">📞 Call 778-862-1515</a>
+                <a href="index.html#contact" class="btn btn-outline">Request a Free Quote</a>
             </div>
-
         </div>
     </section>
 
@@ -183,7 +317,6 @@
                     </div>
                     <p class="footer-tagline">Lower Mainland's Experts in Property Maintenance</p>
                 </div>
-                
                 <div class="footer-col">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
@@ -193,7 +326,6 @@
                         <li><a href="index.html#about">About Us</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-col">
                     <h3>Contact Info</h3>
                     <ul class="footer-contact">
@@ -203,7 +335,6 @@
                     </ul>
                 </div>
             </div>
-            
             <div class="footer-bottom">
                 <p>&copy; <span id="current-year">2026</span> Green Clean (2016) Inc. All rights reserved.</p>
                 <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
@@ -211,7 +342,6 @@
         </div>
     </footer>
 
-    <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
 </html>
