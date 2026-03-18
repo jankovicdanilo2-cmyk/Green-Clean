@@ -492,6 +492,51 @@ img {
     font-family: var(--font-heading);
     font-weight: 700;
     border-radius: 4px;
+    z-index: 2;
+}
+
+/* Split Image Before/After Labels */
+.split-labels {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    pointer-events: none; /* Let hover pass through to the image/overlay */
+    z-index: 2;
+}
+
+/* Specific position variation: Top/Bottom */
+.split-labels.top-bottom {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 20px;
+    top: 0;
+}
+
+.split-labels.top-bottom .label-before {
+    align-self: flex-start;
+}
+
+.split-labels.top-bottom .label-after {
+    align-self: flex-end;
+}
+
+
+
+.label-before, .label-after {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--white);
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 5px 15px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* About Section */
