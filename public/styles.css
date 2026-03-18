@@ -223,6 +223,50 @@ img {
     color: var(--accent-color);
 }
 
+/* Dropdown Menu Styles */
+.dropdown {
+    position: relative;
+    padding-bottom: 20px; /* Bridge gap so hover doesn't break */
+    margin-bottom: -20px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    background-color: var(--white);
+    min-width: 260px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    padding: 10px 0;
+    z-index: 1000;
+    list-style: none; /* remove bullet points */
+    border-top: 3px solid var(--primary-color);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.dropdown-link {
+    display: block;
+    padding: 12px 20px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.dropdown-link:hover {
+    background-color: var(--light-bg);
+    color: var(--primary-color);
+    padding-left: 25px; /* slight indent hover effect */
+}
+
 .hamburger {
     display: none;
     cursor: pointer;
@@ -432,6 +476,17 @@ img {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+}
+
+/* Hide gallery items after the 8th one by default */
+.gallery-grid .gallery-item:nth-child(n+9) {
+    display: none;
+}
+
+/* Show all items when the show-all class is applied */
+.gallery-grid.show-all .gallery-item:nth-child(n+9) {
+    display: block;
+    animation: fadeIn 0.5s ease forwards;
 }
 
 .gallery-item {
@@ -926,6 +981,19 @@ input:focus, select:focus, textarea:focus {
         margin: 16px 0;
     }
     
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        background-color: transparent;
+        border-top: none;
+        padding-left: 20px;
+        display: none;
+    }
+    
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
     .nav-menu.active {
         left: 0;
     }

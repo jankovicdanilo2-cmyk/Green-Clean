@@ -38,7 +38,14 @@
             
             <ul class="nav-menu" id="nav-menu">
                 <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#services" class="nav-link">Our Services</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#services" class="nav-link dropdown-toggle">Our Services ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pressure-washing.html" class="dropdown-link">Pressure / Soft Washing</a></li>
+                        <li><a href="window-cleaning.html" class="dropdown-link">Window Cleaning</a></li>
+                        <li><a href="painting.html" class="dropdown-link">Exterior & Interior Painting</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item"><a href="#gallery" class="nav-link">Recent Work</a></li>
                 <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
                 <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
@@ -321,6 +328,10 @@
                     <div class="gallery-label">Window Cleaning</div>
                 </div>
             </div>
+            
+            <div class="gallery-action" style="text-align: center; margin-top: 40px;">
+                <button id="show-more-gallery" class="btn btn-outline-primary">Show More</button>
+            </div>
         </div>
     </section>
 
@@ -364,7 +375,18 @@
                     
                     <div class="service-areas">
                         <h3>Service Areas:</h3>
-                        <p>Vancouver, Burnaby, Surrey, Richmond, Coquitlam, North Vancouver, Langley, Delta, New Westminster, Abbotsford</p>
+                        <div class="service-badges" style="justify-content: flex-start; gap: 10px; margin-top: 15px;">
+                            <span class="service-badge" style="font-size: 0.95rem; padding: 6px 14px;">📍 Vancouver</span>
+                            <span class="service-badge" style="font-size: 0.95rem; padding: 6px 14px;">📍 Burnaby</span>
+                            <span class="service-badge" style="font-size: 0.95rem; padding: 6px 14px;">📍 Surrey</span>
+                            <span class="service-badge" style="font-size: 0.95rem; padding: 6px 14px;">📍 Richmond</span>
+                            <span class="service-badge" style="font-size: 0.95rem; padding: 6px 14px;">📍 Coquitlam</span>
+                            <span class="service-badge" style="font-size: 0.95rem; padding: 6px 14px;">📍 North Vancouver</span>
+                            <span class="service-badge" style="font-size: 0.95rem; padding: 6px 14px;">📍 Langley</span>
+                            <span class="service-badge" style="font-size: 0.95rem; padding: 6px 14px;">📍 Delta</span>
+                            <span class="service-badge" style="font-size: 0.95rem; padding: 6px 14px;">📍 New Westminster</span>
+                            <span class="service-badge" style="font-size: 0.95rem; padding: 6px 14px;">📍 Abbotsford</span>
+                        </div>
                     </div>
                 </div>
                 

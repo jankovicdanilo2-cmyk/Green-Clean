@@ -141,6 +141,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Gallery Show More Toggle
+    const showMoreBtn = document.getElementById('show-more-gallery');
+    const galleryGrid = document.querySelector('.gallery-grid');
+    
+    if (showMoreBtn && galleryGrid) {
+        showMoreBtn.addEventListener('click', () => {
+            galleryGrid.classList.toggle('show-all');
+            
+            if (galleryGrid.classList.contains('show-all')) {
+                showMoreBtn.textContent = 'Show Less';
+            } else {
+                showMoreBtn.textContent = 'Show More';
+                // Optional: Scroll back up to the top of the gallery
+                document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
+
     // Modal functionality for Gallery
     const modal = document.getElementById("imageModal");
     const modalImg = document.getElementById("modalImage");
