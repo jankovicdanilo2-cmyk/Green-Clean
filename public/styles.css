@@ -53,8 +53,13 @@ h2 {
     text-transform: uppercase;
 }
 
+@media (min-width: 1200px) {
+    h1 { font-size: 4.5rem; }
+    h2 { font-size: 3rem; }
+}
+
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.55rem;
     color: var(--primary-color);
 }
 
@@ -80,9 +85,15 @@ img {
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px; /* Increased from 1200px to reduce desktop empty space */
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px; /* More padding for large screens */
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
 }
 
 .section {
