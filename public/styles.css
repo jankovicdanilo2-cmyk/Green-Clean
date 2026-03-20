@@ -32,7 +32,22 @@ body {
     line-height: 1.6;
     background-color: var(--white);
     overflow-x: hidden;
+    position: relative; /* For decorative blobs */
 }
+
+/* Decorative Background Blobs */
+.bg-blob {
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(123, 194, 66, 0.08) 0%, rgba(123, 194, 66, 0) 70%);
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.blob-1 { top: -10%; left: -10%; }
+.blob-2 { bottom: 10%; right: -5%; width: 800px; height: 800px; }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
@@ -511,6 +526,7 @@ img {
     transition: var(--transition);
     display: flex;
     flex-direction: column;
+    border: 1px solid #d8ecc5; /* Subtle green border */
 }
 
 .service-card:hover {
@@ -571,7 +587,7 @@ img {
 
 /* Gradient Background Utility */
 .bg-gradient-green {
-    background: linear-gradient(135deg, #f8fbf4 0%, #eef5e5 100%); /* Premium subtle green tint */
+    background: linear-gradient(135deg, #f1f9ea 0%, #d8ecc5 100%); /* More saturated premium green tint */
 }
 
 .features-grid {
@@ -587,6 +603,7 @@ img {
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Soft, elevated shadow */
     transition: all 0.3s ease;
+    border: 1px solid #d8ecc5; /* Subtle green border */
     border-bottom: 4px solid var(--accent-color); /* Grounding anchor line */
     display: flex;
     flex-direction: column;
@@ -654,6 +671,7 @@ img {
     overflow: hidden;
     background-color: #f5f4ef;
     cursor: pointer;
+    border: 1px solid #d8ecc5; /* Subtle green border */
 }
 
 .gallery-item img {
