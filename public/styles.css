@@ -348,6 +348,7 @@ img {
 /* Hero Section */
 .hero {
     height: 100vh;
+    height: 100svh;
     min-height: 600px;
     /* Richer, darker gradient for a more cinematic, high-contrast look */
     background: linear-gradient(rgba(10, 45, 24, 0.85), rgba(20, 80, 45, 0.95)), url('./stock-vancouver.jpg') center/cover no-repeat;
@@ -1171,6 +1172,18 @@ img {
         width: 100%;
         max-width: 320px;
     }
+
+    .hero-content {
+        padding-top: 0; 
+    }
+
+    .hero {
+        align-items: flex-start;
+        padding-top: 150px;
+        min-height: 100svh;
+        height: auto;
+    }
+
     
     .hamburger {
         display: block;
@@ -1300,7 +1313,7 @@ img {
 
     /* iPhone-specific: center hero buttons and full-width */
     .hero-content {
-        padding: 80px 12px 20px;
+        padding: 0 12px 20px;
     }
     
     .contact-cta-btn {
