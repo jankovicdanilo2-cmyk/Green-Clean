@@ -1053,13 +1053,10 @@ img {
     color: #E2E8F0;
 }
 
-/* Floating Call Button */
-.floating-call-btn {
+/* Floating Contact Buttons (Mobile) */
+.floating-call-btn, .floating-email-btn {
     position: fixed;
-    bottom: 20px;
     right: 20px;
-    background-color: var(--accent-color);
-    color: var(--white);
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -1072,16 +1069,30 @@ img {
     transition: var(--transition);
 }
 
+.floating-call-btn {
+    bottom: 90px; /* Shifted up to make room for email */
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+
+.floating-email-btn {
+    bottom: 20px;
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
 @media (min-width: 769px) {
-    .floating-call-btn {
+    .floating-call-btn, .floating-email-btn {
         display: none;
     }
 }
 
-.floating-call-btn:hover {
+.floating-call-btn:hover, .floating-email-btn:hover {
     transform: scale(1.1);
-    background-color: #6AB035;
 }
+
+.floating-call-btn:hover { background-color: #6AB035; }
+.floating-email-btn:hover { background-color: var(--dark-green); }
 
 /* Animations */
 .fade-in {
