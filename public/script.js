@@ -25,6 +25,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Also close the menu when the "Get a Free Quote" CTA button is clicked
+    const navCtaBtn = document.querySelector('.nav-cta .btn');
+    if (navCtaBtn) {
+        navCtaBtn.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            const dropdownMenu = document.getElementById('services-dropdown-menu');
+            if (dropdownMenu) dropdownMenu.classList.remove('show');
+        });
+    }
+
     // Mobile Dropdown Interactive Logic
     const servicesToggle = document.getElementById('services-dropdown-toggle');
     const servicesMenu = document.getElementById('services-dropdown-menu');

@@ -23,6 +23,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden; /* Prevent horizontal scroll at the root level */
 }
 
 body {
@@ -1119,15 +1120,34 @@ img {
 
 @media (max-width: 768px) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
     
     h2 {
-        font-size: 2rem;
+        font-size: 1.9rem;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .nav-container {
+        padding: 0 16px;
     }
     
     .hero-buttons {
         flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 320px;
     }
     
     .hamburger {
@@ -1183,7 +1203,7 @@ img {
     }
     
     .dropdown-link:hover {
-        padding-left: 10px; /* Reset so it doesn't horizontally shift when tapped on mobile */
+        padding-left: 10px;
     }
     
     /* On mobile, disable the hover rules to avoid sticky double-taps */
@@ -1204,11 +1224,91 @@ img {
         flex-direction: column;
         gap: 10px;
     }
+
+    /* Contact CTA buttons — ensure they stay within the screen */
+    .contact-cta-block {
+        width: 100%;
+    }
+
+    .contact-cta-btn {
+        width: 100%;
+        padding: 18px 20px;
+        gap: 15px;
+        box-sizing: border-box;
+    }
+    
+    .contact-cta-icon {
+        font-size: 1.8rem;
+    }
+    
+    .contact-cta-value {
+        font-size: 1.1rem;
+        word-break: break-all;
+    }
+    
+    .contact-cta-title {
+        font-size: 0.85rem;
+    }
+
+    /* Services grid: single column on mobile */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Gallery: single column on small screens */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer: stack vertically */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 }
 
 @media (max-width: 480px) {
+    h1 {
+        font-size: 1.9rem;
+    }
+
     .stat-item {
         width: 100%;
+    }
+
+    /* iPhone-specific: center hero buttons and full-width */
+    .hero-content {
+        padding: 80px 12px 20px;
+    }
+    
+    .contact-cta-btn {
+        padding: 15px;
+        flex-direction: row;
+        text-align: left;
+        gap: 12px;
+    }
+    
+    .contact-cta-icon {
+        font-size: 1.6rem;
+    }
+    
+    .contact-cta-value {
+        font-size: 1rem;
+        word-break: break-all;
+    }
+
+    .contact-cta-title {
+        font-size: 0.8rem;
+    }
+
+    /* Reduce section padding on very small screens */
+    .section {
+        padding: 50px 0;
+    }
+
+    .service-badge {
+        font-size: 0.85rem;
+        padding: 7px 12px;
     }
 }
 
