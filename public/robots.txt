@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://greenclean2016.ca/sitemap.xml
+Sitemap: https://www.greencleanpropertyservices.ca/sitemap.xml
