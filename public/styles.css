@@ -1052,6 +1052,11 @@ img {
     margin-bottom: 15px;
 }
 
+.footer-logo .logo-img {
+    box-shadow: none;
+    background-color: #ffffff;
+}
+
 .footer-tagline {
     color: #E2E8F0;
 }
